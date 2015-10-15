@@ -33,7 +33,18 @@ def removePrevious():
             os.unlink(folder)
         else:
             shutil.rmtree(folder)
+    file = home = "/.vimrc"
+    if os.path.exists(file):
+        os.remove(file)
 
-
+print """
+Welcome to my Vim installer.
+This installer will backup the current .vim folder and .vimrc file in the %s directory.
+Then the installer will link the content of the %s directory to the .vim and .vimrc.
+""" % (backupfolder, vimfolder)
+print "Backing up previous data.."
 backupPrevious()
-
+print "Successful."
+print "Removing old data..."
+removePrevious()
+print "Successful."
