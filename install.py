@@ -40,8 +40,8 @@ def removePrevious():
 def linkData():
     folder = vimfolder + "/.vim"
     file = vimfolder + "/.vimrc"
-    os.link(folder, home + "/.vim") 
-    os.link(file, home + "/.vimrc") 
+    os.symlink(folder, home + "/.vim") 
+    os.symlink(file, home + "/.vimrc") 
 
 
 print """
