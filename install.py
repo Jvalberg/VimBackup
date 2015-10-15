@@ -37,6 +37,13 @@ def removePrevious():
     if os.path.exists(file):
         os.remove(file)
 
+def linkData():
+    folder = vimfolder + "/.vim"
+    file = vimfolder = "/.vimrc"
+    os.link(folder, home + "/.vim") 
+    os.link(file, home + "/.vimrc") 
+
+
 print """
 Welcome to my Vim installer.
 This installer will backup the current .vim folder and .vimrc file in the %s directory.
@@ -48,3 +55,7 @@ print "Successful."
 print "Removing old data..."
 removePrevious()
 print "Successful."
+print "Linking data..."
+linkData()
+print "Successful."
+print "Installation complete."
