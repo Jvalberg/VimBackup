@@ -49,6 +49,10 @@ Welcome to my Vim installer.
 This installer will backup the current .vim folder and .vimrc file in the %s directory.
 Then the installer will link the content of the %s directory to the .vim and .vimrc.
 """ % (backupfolder, vimfolder)
+
+print "Press any button to continue (Ctrl+c to abort).."
+raw_input()
+
 print "Backing up previous data.."
 backupPrevious()
 print "Successful."
