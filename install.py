@@ -33,7 +33,7 @@ def removePrevious():
             os.unlink(folder)
         else:
             shutil.rmtree(folder)
-    file = home = "/.vimrc"
+    file = home + "/.vimrc"
     if os.path.exists(file):
         os.remove(file)
 
